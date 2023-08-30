@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 export default function Invoice2() {
-  const [data, setData] = useState<any>();
+  const [enteredData, setEnteredData] = useState<any>();
   class Product {
     constructor(public name: string, public price: number) {}
   }
@@ -67,9 +67,9 @@ export default function Invoice2() {
       <input
         type="text"
         className=" border-2 border-black"
-        onChange={(value: any) => setData(value)}
+        onChange={(e: any) => setEnteredData(e.target.value)}
       />
-      <h1>{data}</h1>
+      <h1>{enteredData}</h1>
     </div>
   );
 }
